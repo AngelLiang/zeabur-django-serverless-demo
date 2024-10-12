@@ -1,3 +1,6 @@
 # zeabur-django-serverless-demo
 
-Describe your project here.
+zeabur以serverless方式部署django示例
+
+- python >= 3.8
+- django 5.1
