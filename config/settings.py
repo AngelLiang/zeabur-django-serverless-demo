@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -121,3 +123,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 如果前端需要跨域请求，需要这样设置
+CORS_ALLOW_CREDENTIALS = True
+
+# 与withCredentials模式不兼容。
+# CORS_ORIGIN_ALLOW_ALL = True
+
+# 明确指定允许的源
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5174",
+    "https://vue3-serverless-demo.zeabur.app",
+]

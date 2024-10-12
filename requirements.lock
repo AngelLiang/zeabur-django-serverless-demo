@@ -13,8 +13,11 @@ annotated-types==0.7.0
     # via pydantic
 asgiref==3.8.1
     # via django
+    # via django-cors-headers
 django==5.1.2
+    # via django-cors-headers
     # via django-ninja
+django-cors-headers==4.5.0
 django-ninja==1.3.0
 pydantic==2.9.2
     # via django-ninja
