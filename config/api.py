@@ -23,4 +23,4 @@ api = NinjaAPI(
 
 @api.get('/index')
 def index(request):
-    return {'hello', 'world'}
+    return {'hello': 'world'}
